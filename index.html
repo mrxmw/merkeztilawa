@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Merkez Tilawa — Cours de Coran, Tajweed & Arabe</title>
+<title>Merkez Tilawa — Cours de Coran, Tajweed & Arabe en ligne</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -17,12 +18,14 @@
 }
 
 :root{
-  --bleu:#17335f;
-  --bleu2:#102648;
-  --or:#d4af5a;
+  --bleu:#1a3a6e;
+  --bleu2:#0f2548;
+  --or:#c9a84c;
+  --or2:#f0d48a;
+  --creme:#f9f8f5;
   --blanc:#ffffff;
   --gris:#64748b;
-  --creme:#f8f7f4;
+  --texte:#1e293b;
 
   --sans:'Inter',sans-serif;
   --serif:'Cormorant Garamond',serif;
@@ -34,8 +37,8 @@ html{
 
 body{
   font-family:var(--sans);
+  color:var(--texte);
   background:#fff;
-  color:#111827;
   overflow-x:hidden;
 }
 
@@ -48,25 +51,26 @@ nav{
   top:0;
   left:0;
   right:0;
-  z-index:999;
 
-  height:110px;
+  z-index:1000;
 
   background:#ffffff;
 
   border-bottom:1px solid rgba(0,0,0,0.06);
 
+  height:88px;
+
+  padding:0 5vw;
+
   display:flex;
   align-items:center;
   justify-content:space-between;
-
-  padding:0 5vw;
 }
 
 /* LOGO */
 
-nav img{
-  height:170px;
+.nav-logo img{
+  height:95px;
   width:auto;
   object-fit:contain;
   display:block;
@@ -76,13 +80,14 @@ nav img{
 
 .nav-links{
   display:flex;
-  align-items:center;
-  gap:2.4rem;
+  gap:2rem;
   list-style:none;
+  align-items:center;
 }
 
 .nav-links a{
   text-decoration:none;
+
   color:var(--bleu);
 
   font-size:15px;
@@ -99,11 +104,12 @@ nav img{
 
 .nav-cta{
   background:var(--bleu);
+
   color:#fff;
 
   text-decoration:none;
 
-  padding:13px 24px;
+  padding:12px 22px;
 
   border-radius:8px;
 
@@ -117,7 +123,7 @@ nav img{
   background:var(--bleu2);
 }
 
-/* MENU MOBILE */
+/* MOBILE */
 
 .menu-toggle{
   display:none;
@@ -125,11 +131,11 @@ nav img{
   background:none;
   border:none;
 
-  font-size:30px;
+  cursor:pointer;
+
+  font-size:28px;
 
   color:var(--bleu);
-
-  cursor:pointer;
 }
 
 .mobile-menu{
@@ -138,7 +144,7 @@ nav img{
 
   background:var(--bleu);
 
-  z-index:1000;
+  z-index:2000;
 
   display:flex;
   flex-direction:column;
@@ -160,6 +166,7 @@ nav img{
 
 .mobile-menu a{
   color:#fff;
+
   text-decoration:none;
 
   font-size:24px;
@@ -176,7 +183,7 @@ nav img{
 
   color:#fff;
 
-  font-size:34px;
+  font-size:32px;
 
   cursor:pointer;
 }
@@ -188,15 +195,15 @@ nav img{
 .hero{
   min-height:100vh;
 
+  padding-top:88px;
+
   background:
   linear-gradient(
     135deg,
     var(--bleu2) 0%,
     var(--bleu) 60%,
-    #284a84 100%
+    #2a4f8a 100%
   );
-
-  padding-top:110px;
 
   display:flex;
   align-items:center;
@@ -211,7 +218,7 @@ nav img{
   padding:4rem 5vw;
 
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:1.1fr .9fr;
 
   gap:4rem;
   align-items:center;
@@ -220,11 +227,11 @@ nav img{
 .hero-badge{
   display:inline-block;
 
-  background:rgba(212,175,90,.12);
+  background:rgba(201,168,76,.12);
 
-  border:1px solid rgba(212,175,90,.25);
+  border:1px solid rgba(201,168,76,.25);
 
-  color:#f5dd9f;
+  color:var(--or2);
 
   padding:8px 16px;
 
@@ -233,13 +240,13 @@ nav img{
   font-size:12px;
   letter-spacing:.08em;
 
-  margin-bottom:1.6rem;
+  margin-bottom:1.5rem;
 }
 
 .hero h1{
   color:#fff;
 
-  font-size:clamp(42px,6vw,74px);
+  font-size:clamp(42px,6vw,72px);
 
   line-height:1.05;
 
@@ -248,17 +255,17 @@ nav img{
 
 .hero h1 em{
   font-family:var(--serif);
-  color:#f5dd9f;
+  color:var(--or2);
   font-style:italic;
   font-weight:400;
 }
 
 .hero-sub{
-  color:rgba(255,255,255,.75);
-
-  font-size:17px;
+  color:rgba(255,255,255,.72);
 
   line-height:1.9;
+
+  font-size:17px;
 
   max-width:560px;
 
@@ -273,11 +280,12 @@ nav img{
 
 .btn-primary{
   background:var(--or);
+
   color:var(--bleu2);
 
   text-decoration:none;
 
-  padding:15px 30px;
+  padding:15px 28px;
 
   border-radius:8px;
 
@@ -297,7 +305,7 @@ nav img{
 
   text-decoration:none;
 
-  padding:15px 30px;
+  padding:15px 28px;
 
   border-radius:8px;
 
@@ -317,14 +325,14 @@ nav img{
 
   border-radius:18px;
 
-  padding:3rem;
+  padding:2.5rem;
 
   backdrop-filter:blur(10px);
 }
 
 .hero-card img{
   width:100%;
-  max-width:340px;
+  max-width:220px;
 
   display:block;
 
@@ -355,8 +363,9 @@ nav img{
 .hero-card-text{
   color:rgba(255,255,255,.8);
 
-  font-size:14px;
   line-height:1.7;
+
+  font-size:14px;
 }
 
 .hero-card-text strong{
@@ -397,7 +406,7 @@ nav img{
 
   line-height:1.15;
 
-  margin-bottom:1.2rem;
+  margin-bottom:1rem;
 }
 
 .section-sub{
@@ -409,7 +418,7 @@ nav img{
 }
 
 /* =========================
-   CARDS
+   CARTES
 ========================= */
 
 .cards{
@@ -460,6 +469,104 @@ nav img{
 }
 
 /* =========================
+   TARIFS
+========================= */
+
+.tarifs{
+  background:var(--creme);
+}
+
+.tarifs-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+
+  gap:1.5rem;
+
+  margin-top:4rem;
+}
+
+.tarif-card{
+  background:#fff;
+
+  border-radius:18px;
+
+  padding:2.5rem;
+
+  border:1px solid #ececec;
+
+  transition:.25s;
+}
+
+.tarif-card:hover{
+  transform:translateY(-6px);
+}
+
+.tarif-card.featured{
+  background:var(--bleu);
+
+  color:#fff;
+
+  transform:scale(1.03);
+}
+
+.tarif-name{
+  font-size:14px;
+  font-weight:700;
+
+  text-transform:uppercase;
+
+  letter-spacing:.08em;
+
+  margin-bottom:1rem;
+}
+
+.tarif-price{
+  font-size:54px;
+  font-weight:800;
+
+  margin-bottom:1rem;
+}
+
+.tarif-items{
+  list-style:none;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:.8rem;
+
+  margin:2rem 0;
+}
+
+.tarif-items li{
+  font-size:14px;
+}
+
+.tarif-btn{
+  display:block;
+
+  text-align:center;
+
+  text-decoration:none;
+
+  padding:14px;
+
+  border-radius:8px;
+
+  font-weight:700;
+}
+
+.tarif-btn-blue{
+  background:var(--bleu);
+  color:#fff;
+}
+
+.tarif-btn-gold{
+  background:var(--or);
+  color:var(--bleu2);
+}
+
+/* =========================
    FOOTER
 ========================= */
 
@@ -492,8 +599,6 @@ footer img{
   color:rgba(255,255,255,.5);
 
   text-decoration:none;
-
-  font-size:14px;
 }
 
 .footer-copy{
@@ -509,11 +614,11 @@ footer img{
 @media(max-width:900px){
 
   nav{
-    height:90px;
+    height:80px;
   }
 
-  nav img{
-    height:120px;
+  .nav-logo img{
+    height:72px;
   }
 
   .nav-links,
@@ -526,14 +631,15 @@ footer img{
   }
 
   .hero{
-    padding-top:90px;
+    padding-top:80px;
   }
 
   .hero-inner{
     grid-template-columns:1fr;
   }
 
-  .cards{
+  .cards,
+  .tarifs-grid{
     grid-template-columns:1fr;
   }
 
@@ -553,8 +659,8 @@ footer img{
 
 <nav>
 
-  <a href="#">
-    <img src="logo.png" alt="Merkez Tilawa">
+  <a href="#" class="nav-logo">
+    <img src="logo.jpg" alt="Merkez Tilawa">
   </a>
 
   <ul class="nav-links">
@@ -617,7 +723,7 @@ footer img{
       <div class="hero-actions">
 
         <a href="#contact" class="btn-primary">
-          Je m'inscris
+          Je m'inscris maintenant
         </a>
 
         <a href="#cours" class="btn-ghost">
@@ -630,7 +736,7 @@ footer img{
 
     <div class="hero-card">
 
-      <img src="logo.png" alt="Merkez Tilawa">
+      <img src="logo.jpg" alt="Merkez Tilawa">
 
       <div class="hero-card-items">
 
@@ -646,7 +752,7 @@ footer img{
           <div class="hero-card-icon">🌙</div>
           <div class="hero-card-text">
             <strong>Coran</strong>
-            Mémorisation et récitation
+            Récitation & mémorisation
           </div>
         </div>
 
@@ -654,7 +760,7 @@ footer img{
           <div class="hero-card-icon">✍️</div>
           <div class="hero-card-text">
             <strong>Arabe</strong>
-            Lecture et compréhension
+            Lecture & compréhension
           </div>
         </div>
 
@@ -681,8 +787,7 @@ footer img{
     </h2>
 
     <p class="section-sub">
-      Un accompagnement personnalisé pour progresser réellement
-      dans la récitation du Coran et la langue arabe.
+      Un enseignement personnalisé pour progresser réellement.
     </p>
 
     <div class="cards">
@@ -729,15 +834,102 @@ footer img{
 
 </section>
 
+<!-- TARIFS -->
+
+<section class="section tarifs" id="tarifs">
+
+  <div class="section-inner">
+
+    <div class="section-tag">
+      Tarifs
+    </div>
+
+    <h2 class="section-title">
+      Choisis ta formule
+    </h2>
+
+    <div class="tarifs-grid">
+
+      <div class="tarif-card">
+
+        <div class="tarif-name">
+          Découverte
+        </div>
+
+        <div class="tarif-price">
+          XX€
+        </div>
+
+        <ul class="tarif-items">
+          <li>1 cours individuel</li>
+          <li>45 minutes</li>
+          <li>Sans engagement</li>
+        </ul>
+
+        <a href="#" class="tarif-btn tarif-btn-blue">
+          Réserver
+        </a>
+
+      </div>
+
+      <div class="tarif-card featured">
+
+        <div class="tarif-name">
+          Mensuel
+        </div>
+
+        <div class="tarif-price">
+          XX€
+        </div>
+
+        <ul class="tarif-items">
+          <li>4 cours / mois</li>
+          <li>Programme personnalisé</li>
+          <li>Support WhatsApp</li>
+        </ul>
+
+        <a href="#" class="tarif-btn tarif-btn-gold">
+          S'inscrire
+        </a>
+
+      </div>
+
+      <div class="tarif-card">
+
+        <div class="tarif-name">
+          Intensif
+        </div>
+
+        <div class="tarif-price">
+          XX€
+        </div>
+
+        <ul class="tarif-items">
+          <li>8 cours / mois</li>
+          <li>Progression accélérée</li>
+          <li>Suivi prioritaire</li>
+        </ul>
+
+        <a href="#" class="tarif-btn tarif-btn-blue">
+          S'inscrire
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
 <!-- FOOTER -->
 
 <footer>
 
-  <img src="logo.png" alt="Merkez Tilawa">
+  <img src="logo.jpg" alt="Merkez Tilawa">
 
   <ul class="footer-links">
     <li><a href="#cours">Les cours</a></li>
-    <li><a href="#prof">Le professeur</a></li>
     <li><a href="#tarifs">Tarifs</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
